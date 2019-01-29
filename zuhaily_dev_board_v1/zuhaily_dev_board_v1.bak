@@ -1150,4 +1150,6 @@ Wire Wire Line
 	10600 2750 10450 2750
 Wire Wire Line
 	10600 2850 10450 2850
+Text Notes 17300 3150 0    50   ~ 0
+how to choose between usb vs batt?\n
 $EndSCHEMATC
