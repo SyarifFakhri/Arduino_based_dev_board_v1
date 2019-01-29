@@ -1152,4 +1152,15 @@ Wire Wire Line
 	10600 2850 10450 2850
 Text Notes 17300 3150 0    50   ~ 0
 how to choose between usb vs batt?\n
+$Comp
+L Battery_Management:BQ297xy U?
+U 1 1 5C50F073
+P 15150 2550
+F 0 "U?" H 15150 2917 50  0000 C CNN
+F 1 "BQ297xy" H 15150 2826 50  0000 C CNN
+F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 15150 2900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 14900 2750 50  0001 C CNN
+	1    15150 2550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

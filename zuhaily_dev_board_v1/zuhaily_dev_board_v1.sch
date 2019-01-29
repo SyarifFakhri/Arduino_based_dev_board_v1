@@ -1163,4 +1163,15 @@ F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 14900 2750 50  0001 C CNN
 	1    15150 2550
 	1    0    0    -1  
 $EndComp
+$Comp
+L 4xxx_IEEE:4001 U?
+U 1 1 5C5155E3
+P 17750 2550
+F 0 "U?" H 18291 2609 50  0000 L CNN
+F 1 "4001" H 18291 2518 50  0000 L CNN
+F 2 "" H 17750 2550 50  0001 C CNN
+F 3 "" H 17750 2550 50  0001 C CNN
+	1    17750 2550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
