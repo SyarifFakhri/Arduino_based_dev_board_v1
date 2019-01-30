@@ -104,8 +104,6 @@ F 3 "" H 16800 3500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	15800 3200 15800 3250
-Wire Wire Line
 	15800 3250 15850 3250
 $Comp
 L Device:R R?
@@ -169,8 +167,6 @@ F 3 "~" H 15800 4100 50  0001 C CNN
 	1    15800 4100
 	0    -1   -1   0   
 $EndComp
-Text Label 15800 3850 0    50   ~ 0
-CE_CHARGE_IC
 Wire Wire Line
 	15800 3950 15800 3850
 $Comp
@@ -315,12 +311,6 @@ F 3 "" H 17700 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 17700 3550
-Wire Notes Line
-	14550 2150 18750 2150
-Wire Notes Line
-	18750 2150 18750 5000
-Wire Notes Line
-	18750 5000 14550 5000
 Wire Notes Line
 	14550 5000 14550 2150
 Text Notes 14550 2150 0    50   ~ 0
@@ -1140,7 +1130,7 @@ Wire Notes Line
 	9700 9200 9700 10400
 Text Notes 9700 9200 0    50   ~ 0
 esp 8266
-Text Notes 15050 2950 0    50   ~ 0
+Text Notes 15100 3150 0    50   ~ 0
 protection ic?\n
 Wire Wire Line
 	10600 2550 10450 2550
@@ -1150,17 +1140,15 @@ Wire Wire Line
 	10600 2750 10450 2750
 Wire Wire Line
 	10600 2850 10450 2850
-Text Notes 17300 3150 0    50   ~ 0
-how to choose between usb vs batt?\n
 $Comp
 L Battery_Management:BQ297xy U?
 U 1 1 5C50F073
-P 15150 2550
-F 0 "U?" H 15150 2917 50  0000 C CNN
-F 1 "BQ297xy" H 15150 2826 50  0000 C CNN
-F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 15150 2900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 14900 2750 50  0001 C CNN
-	1    15150 2550
+P 19300 3500
+F 0 "U?" H 19300 3867 50  0000 C CNN
+F 1 "BQ297xy" H 19300 3776 50  0000 C CNN
+F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 19300 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 19050 3700 50  0001 C CNN
+	1    19300 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1264,10 +1252,10 @@ $EndComp
 Wire Wire Line
 	16650 6900 16650 6850
 $Comp
-L tinkerforge:MOSFET_P_CH Q?
+L tinkerforge:MOSFET_P_CH Q_FDN340P
 U 1 1 5C56CE68
 P 18100 7500
-F 0 "Q?" V 18336 7500 50  0000 C CNN
+F 0 "Q_FDN340P" V 18336 7500 50  0000 C CNN
 F 1 "MOSFET_P_CH" V 18427 7500 50  0000 C CNN
 F 2 "" H 18300 7600 50  0000 C CNN
 F 3 "" H 18100 7500 50  0000 C CNN
@@ -1315,4 +1303,150 @@ Text Notes 16600 7250 0    50   ~ 0
 not  sure why it's compared to 3.3v\n
 Text Notes 16750 6100 0    50   ~ 0
 also not sure why vin is divided by 2\n
+Wire Wire Line
+	15800 3250 15800 3200
+Text Label 15800 3850 0    50   ~ 0
+5V_FILTERED
+$Comp
+L Device:R R?
+U 1 1 5C5EC1A2
+P 18500 3850
+F 0 "R?" H 18570 3896 50  0000 L CNN
+F 1 "2.2k" H 18570 3805 50  0000 L CNN
+F 2 "" V 18430 3850 50  0001 C CNN
+F 3 "~" H 18500 3850 50  0001 C CNN
+	1    18500 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	18900 3600 18900 3850
+Wire Wire Line
+	18900 3850 18650 3850
+Wire Wire Line
+	18350 3850 18000 3850
+Wire Wire Line
+	18000 3850 18000 3550
+Connection ~ 18000 3550
+$Comp
+L power:GND #PWR?
+U 1 1 5C5F9BA8
+P 19300 3900
+F 0 "#PWR?" H 19300 3650 50  0001 C CNN
+F 1 "GND" H 19305 3727 50  0000 C CNN
+F 2 "" H 19300 3900 50  0001 C CNN
+F 3 "" H 19300 3900 50  0001 C CNN
+	1    19300 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	19300 3900 19300 3800
+$Comp
+L tinkerforge:MOSFET_N_CH Q?
+U 1 1 5C6017A2
+P 20350 3950
+F 0 "Q?" V 20586 3950 50  0000 C CNN
+F 1 "MOSFET_N_CH" V 20677 3950 50  0000 C CNN
+F 2 "" H 20550 4050 50  0000 C CNN
+F 3 "" H 20350 3950 50  0000 C CNN
+	1    20350 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L tinkerforge:MOSFET_N_CH Q?
+U 1 1 5C601C79
+P 21050 3950
+F 0 "Q?" V 21286 3950 50  0000 C CNN
+F 1 "MOSFET_N_CH" V 21377 3950 50  0000 C CNN
+F 2 "" H 21250 4050 50  0000 C CNN
+F 3 "" H 21050 3950 50  0000 C CNN
+	1    21050 3950
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	20850 4050 20550 4050
+Wire Wire Line
+	20350 3750 20350 3400
+Wire Wire Line
+	20350 3400 19700 3400
+Wire Wire Line
+	21050 3750 21050 3600
+Wire Wire Line
+	21050 3600 19700 3600
+Wire Wire Line
+	20150 4050 19800 4050
+Wire Wire Line
+	19800 4050 19800 4450
+$Comp
+L Device:R R?
+U 1 1 5C61EB36
+P 18900 2850
+F 0 "R?" H 18970 2896 50  0000 L CNN
+F 1 "330" H 18970 2805 50  0000 L CNN
+F 2 "" V 18830 2850 50  0001 C CNN
+F 3 "~" H 18900 2850 50  0001 C CNN
+	1    18900 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	18900 3000 18900 3150
+Text Notes 17300 2550 0    50   ~ 0
+how to choose between usb vs batt?\n
+Wire Wire Line
+	18000 3250 18000 2700
+Wire Wire Line
+	18000 2700 18900 2700
+Connection ~ 18000 3250
+$Comp
+L c:C C?
+U 1 1 5C634B89
+P 18650 3200
+F 0 "C?" H 18723 3146 50  0000 L CNN
+F 1 "0.1uF" H 18723 3055 50  0000 L CNN
+F 2 "" H 18550 3350 60  0000 C CNN
+F 3 "" H 18550 3350 60  0000 C CNN
+	1    18650 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	18900 3150 18650 3150
+Wire Wire Line
+	18650 3150 18650 3200
+Connection ~ 18900 3150
+Wire Wire Line
+	18900 3150 18900 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5C63BF33
+P 18650 3400
+F 0 "#PWR?" H 18650 3150 50  0001 C CNN
+F 1 "GND" H 18655 3227 50  0000 C CNN
+F 2 "" H 18650 3400 50  0001 C CNN
+F 3 "" H 18650 3400 50  0001 C CNN
+	1    18650 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	21350 4050 21250 4050
+Wire Wire Line
+	18000 4450 18000 3850
+Wire Wire Line
+	18000 4450 19700 4450
+Connection ~ 18000 3850
+Wire Wire Line
+	21350 4050 21350 4800
+Wire Wire Line
+	21350 4800 19700 4800
+Wire Wire Line
+	19700 4800 19700 4450
+Connection ~ 19700 4450
+Wire Wire Line
+	19700 4450 19800 4450
+Text Notes 19700 4800 0    50   ~ 0
+not sure if this is suppossed to be connected here\n
+Wire Notes Line
+	21850 5000 21850 2150
+Wire Notes Line
+	14550 2150 21850 2150
+Wire Notes Line
+	14550 5000 21850 5000
 $EndSCHEMATC
