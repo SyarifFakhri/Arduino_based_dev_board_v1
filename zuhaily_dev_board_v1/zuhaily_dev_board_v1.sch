@@ -2,7 +2,7 @@ EESchema Schematic File Version 4
 LIBS:zuhaily_dev_board_v1-cache
 EELAYER 26 0
 EELAYER END
-$Descr User 19685 11811
+$Descr User 39370 11811
 encoding utf-8
 Sheet 1 1
 Title ""
@@ -782,10 +782,10 @@ Wire Wire Line
 	4000 5800 3550 5800
 Wire Wire Line
 	4000 5700 3550 5700
-Text Label 3200 1650 0    50   ~ 0
-USB_VCC
+Text Label 3200 1550 0    50   ~ 0
+5V_REGULATOR_IN
 Wire Wire Line
-	3200 1650 3200 1850
+	3200 1550 3200 1850
 Text Label 4950 6100 0    50   ~ 0
 CH340_DTR
 Wire Wire Line
@@ -1163,4 +1163,156 @@ F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 14900 2750 50  0001 C CNN
 	1    15150 2550
 	1    0    0    -1  
 $EndComp
+$Comp
+L tinkerforge:DC_JACK J?
+U 1 1 5C521394
+P 15250 6700
+F 0 "J?" H 15331 7037 60  0000 C CNN
+F 1 "DC_JACK" H 15331 6931 60  0000 C CNN
+F 2 "" H 15250 6700 60  0000 C CNN
+F 3 "" H 15250 6700 60  0000 C CNN
+	1    15250 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C528256
+P 15200 6300
+F 0 "#PWR?" H 15200 6050 50  0001 C CNN
+F 1 "GND" H 15205 6127 50  0000 C CNN
+F 2 "" H 15200 6300 50  0001 C CNN
+F 3 "" H 15200 6300 50  0001 C CNN
+	1    15200 6300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15200 6300 15200 6400
+Wire Wire Line
+	15200 6400 15450 6400
+Wire Wire Line
+	15450 6400 15450 6600
+Connection ~ 15200 6400
+NoConn ~ 17300 3550
+$Comp
+L pspice:DIODE D?
+U 1 1 5C5476D5
+P 15800 6750
+F 0 "D?" H 15800 7015 50  0000 C CNN
+F 1 "DIODE" H 15800 6924 50  0000 C CNN
+F 2 "" H 15800 6750 50  0001 C CNN
+F 3 "~" H 15800 6750 50  0001 C CNN
+	1    15800 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15600 6750 15450 6750
+$Comp
+L Device:R R?
+U 1 1 5C54DF04
+P 16650 6250
+F 0 "R?" H 16720 6296 50  0000 L CNN
+F 1 "10K" H 16720 6205 50  0000 L CNN
+F 2 "" V 16580 6250 50  0001 C CNN
+F 3 "~" H 16650 6250 50  0001 C CNN
+	1    16650 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C54DF86
+P 16650 6700
+F 0 "R?" H 16720 6746 50  0000 L CNN
+F 1 "10K" H 16720 6655 50  0000 L CNN
+F 2 "" V 16580 6700 50  0001 C CNN
+F 3 "~" H 16650 6700 50  0001 C CNN
+	1    16650 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16650 6550 16650 6400
+Wire Wire Line
+	16000 6750 16000 6000
+Wire Wire Line
+	16000 6000 16650 6000
+Wire Wire Line
+	16650 6000 16650 6100
+$Comp
+L Amplifier_Operational:LMV358 U?
+U 1 1 5C5593EF
+P 17650 6650
+F 0 "U?" H 17650 7017 50  0000 C CNN
+F 1 "LMV358" H 17650 6926 50  0000 C CNN
+F 2 "" H 17650 6650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 17650 6650 50  0001 C CNN
+	1    17650 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	17350 6550 16650 6550
+Connection ~ 16650 6550
+$Comp
+L power:GND #PWR?
+U 1 1 5C55F888
+P 16650 6900
+F 0 "#PWR?" H 16650 6650 50  0001 C CNN
+F 1 "GND" H 16655 6727 50  0000 C CNN
+F 2 "" H 16650 6900 50  0001 C CNN
+F 3 "" H 16650 6900 50  0001 C CNN
+	1    16650 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16650 6900 16650 6850
+$Comp
+L tinkerforge:MOSFET_P_CH Q?
+U 1 1 5C56CE68
+P 18100 7500
+F 0 "Q?" V 18336 7500 50  0000 C CNN
+F 1 "MOSFET_P_CH" V 18427 7500 50  0000 C CNN
+F 2 "" H 18300 7600 50  0000 C CNN
+F 3 "" H 18100 7500 50  0000 C CNN
+	1    18100 7500
+	0    1    1    0   
+$EndComp
+Text Label 17400 7600 0    50   ~ 0
+USB_VCC
+Wire Wire Line
+	17900 7600 17400 7600
+Wire Wire Line
+	17950 6650 18100 6650
+Wire Wire Line
+	18100 6650 18100 7300
+Text Label 16100 7500 0    50   ~ 0
+5V_REGULATOR_IN
+Wire Wire Line
+	16000 6750 16000 7500
+Wire Wire Line
+	16000 7500 16100 7500
+Connection ~ 16000 6750
+Text Label 18700 7500 0    50   ~ 0
+5V_REGULATED
+Wire Wire Line
+	18700 7500 18700 7600
+Wire Wire Line
+	18700 7600 18300 7600
+Wire Notes Line
+	19450 5850 19450 8050
+Wire Notes Line
+	19450 8050 14750 8050
+Wire Notes Line
+	14750 8050 14750 5850
+Wire Notes Line
+	14750 5850 19450 5850
+Text Notes 14800 5850 0    50   ~ 0
+DC/usb switcher\n
+Text Label 17150 7100 0    50   ~ 0
+3.3V_REGULATED
+Wire Wire Line
+	17150 7100 17150 6750
+Wire Wire Line
+	17150 6750 17350 6750
+Text Notes 16600 7250 0    50   ~ 0
+not  sure why it's compared to 3.3v\n
+Text Notes 16750 6100 0    50   ~ 0
+also not sure why vin is divided by 2\n
 $EndSCHEMATC
