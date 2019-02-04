@@ -1251,8 +1251,6 @@ Wire Wire Line
 	15800 3250 15800 3200
 Text Label 15800 3850 0    50   ~ 0
 5V_FILTERED
-Text Notes 17300 2550 0    50   ~ 0
-how to choose between usb vs batt?\n
 Wire Notes Line
 	21850 5000 21850 2150
 Wire Notes Line
@@ -1295,7 +1293,7 @@ F 3 "" H 17450 3050 60  0000 C CNN
 	1    17550 2900
 	1    0    0    -1  
 $EndComp
-Text Label 18300 2700 0    50   ~ 0
+Text Label 18300 2500 0    50   ~ 0
 BATT_OUT_POSITIVE
 Text Label 17700 3600 0    50   ~ 0
 BATT_OUT_NEGATIVE
@@ -1335,17 +1333,6 @@ Wire Wire Line
 Wire Wire Line
 	20750 4650 20750 4700
 $Comp
-L Device:R R?
-U 1 1 5C70140F
-P 18300 2950
-F 0 "R?" H 18370 2996 50  0000 L CNN
-F 1 "100" H 18370 2905 50  0000 L CNN
-F 2 "" V 18230 2950 50  0001 C CNN
-F 3 "~" H 18300 2950 50  0001 C CNN
-	1    18300 2950
-	1    0    0    -1  
-$EndComp
-$Comp
 L c:C C?
 U 1 1 5C741113
 P 18850 2950
@@ -1369,11 +1356,6 @@ Wire Wire Line
 Wire Wire Line
 	18300 3500 18300 3400
 Connection ~ 18850 3500
-Wire Wire Line
-	18850 2800 18300 2800
-Connection ~ 18850 2800
-Wire Wire Line
-	18300 2800 18300 2700
 Connection ~ 18300 2800
 $Comp
 L power:GND #PWR?
@@ -1426,4 +1408,30 @@ Wire Wire Line
 	17550 2800 17550 2900
 Wire Wire Line
 	17550 2800 18300 2800
+Wire Wire Line
+	17300 3250 17300 2800
+Wire Wire Line
+	17300 2800 17550 2800
+Connection ~ 17550 2800
+$Comp
+L Device:R R?
+U 1 1 5C7EA956
+P 18600 2800
+F 0 "R?" H 18670 2846 50  0000 L CNN
+F 1 "100" H 18670 2755 50  0000 L CNN
+F 2 "" V 18530 2800 50  0001 C CNN
+F 3 "~" H 18600 2800 50  0001 C CNN
+	1    18600 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	18300 3100 18300 2800
+Wire Wire Line
+	18850 2800 18750 2800
+Connection ~ 18850 2800
+Wire Wire Line
+	18300 2800 18450 2800
+Wire Wire Line
+	18300 2500 18300 2800
+NoConn ~ 19150 3900
 $EndSCHEMATC
