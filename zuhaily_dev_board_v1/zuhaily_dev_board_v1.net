@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/syarif/pcb_design/zuhaily_dev_board_v1/zuhaily_dev_board_v1/zuhaily_dev_board_v1.sch)
-    (date "Rabu 06 Feb 2019 02:27:44  +08")
+    (date "Rabu 06 Feb 2019 02:36:30  +08")
     (tool "Eeschema 5.0.2-bee76a0~70~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -266,7 +266,7 @@
       (tstamp 5C667F06))
     (comp (ref BT1)
       (value Battery_Cell)
-      (footprint Battery:BatteryHolder_Keystone_1042_1x18650)
+      (footprint Battery:BatteryHolder_MPD_BH-18650-PC2)
       (datasheet ~)
       (libsource (lib Device) (part Battery_Cell) (description "Single-cell battery"))
       (sheetpath (names /) (tstamps /))
