@@ -686,19 +686,6 @@ Wire Notes Line
 Text Notes 3000 1350 0    50   ~ 0
 voltage regulators\n\n
 $Comp
-L zuhaily_dev_board_v1-rescue:ESP-01v090-ESP8266 U_ESP1
-U 1 1 5C52D7F9
-P 27800 4150
-F 0 "U_ESP1" H 27800 4665 50  0000 C CNN
-F 1 "ESP-01v090" H 27800 4574 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 27800 4150 50  0001 C CNN
-F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 27800 4150 50  0001 C CNN
-	1    27800 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	28750 4000 28800 4000
-$Comp
 L zuhaily_dev_board_v1-rescue:Conn_01x04_Female-Connector J_oled_header1
 U 1 1 5C533EE5
 P 24300 1650
@@ -743,8 +730,6 @@ Wire Wire Line
 	5350 5500 5350 5750
 Wire Wire Line
 	5350 5750 5800 5750
-Wire Wire Line
-	28900 4300 28750 4300
 Text Label 11950 5400 0    50   ~ 0
 ARDUINO_TX
 Wire Wire Line
@@ -809,65 +794,6 @@ Wire Wire Line
 	13000 4350 13000 4200
 Text Label 13000 5350 0    50   ~ 0
 ARDUINO_RX
-$Comp
-L zuhaily_dev_board_v1-rescue:74LVC245-tinkerforge U1
-U 1 1 5C510C72
-P 2650 8900
-F 0 "U1" H 2650 9597 60  0000 C CNN
-F 1 "74LVC245" H 2650 9491 60  0000 C CNN
-F 2 "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" H 2650 8900 60  0001 C CNN
-F 3 "" H 2650 8900 60  0000 C CNN
-	1    2650 8900
-	1    0    0    -1  
-$EndComp
-Text Label 3100 8350 0    50   ~ 0
-3.3V_REGULATED
-Wire Wire Line
-	3100 8350 3100 8450
-Wire Wire Line
-	3100 8450 3000 8450
-$Comp
-L zuhaily_dev_board_v1-rescue:GND-power #PWR0117
-U 1 1 5C522A14
-P 2250 9450
-F 0 "#PWR0117" H 2250 9200 50  0001 C CNN
-F 1 "GND" H 2255 9277 50  0000 C CNN
-F 2 "" H 2250 9450 50  0001 C CNN
-F 3 "" H 2250 9450 50  0001 C CNN
-	1    2250 9450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2300 9350 2250 9350
-Wire Wire Line
-	2250 9350 2250 9450
-$Comp
-L zuhaily_dev_board_v1-rescue:GND-power #PWR0118
-U 1 1 5C526CF2
-P 3450 8550
-F 0 "#PWR0118" H 3450 8300 50  0001 C CNN
-F 1 "GND" H 3455 8377 50  0000 C CNN
-F 2 "" H 3450 8550 50  0001 C CNN
-F 3 "" H 3450 8550 50  0001 C CNN
-	1    3450 8550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 8550 3000 8550
-Text Label 1700 8450 0    50   ~ 0
-3.3V_REGULATED
-Wire Wire Line
-	2300 8450 1700 8450
-Text Label 3050 9150 0    50   ~ 0
-LEVEL_SHIFT_SD_MOSI
-Text Label 3050 8950 0    50   ~ 0
-LEVEL_SHIFT_SD_SCK
-Wire Wire Line
-	3000 8950 3050 8950
-Wire Wire Line
-	3000 9150 3050 9150
-Wire Wire Line
-	3050 9050 3000 9050
 Text Label 10600 2850 0    50   ~ 0
 ARDUINO_LEVEL_SHIFT_SCK
 Text Label 10600 2650 0    50   ~ 0
@@ -876,26 +802,10 @@ Text Label 10600 2550 0    50   ~ 0
 ARDUINO_LEVEL_SHIFT_CS
 Text Label 10600 2750 0    50   ~ 0
 ARDUINO_SD_MISO
-Text Label 3050 9050 0    50   ~ 0
-LEVEL_SHIFT_SD_CS
-Wire Notes Line
-	7450 7650 750  7650
-Text Notes 750  7650 0    50   ~ 0
-SD card\n
 Wire Notes Line
 	8400 8500 14050 8500
 Text Notes 8400 650  0    50   ~ 0
 atmega 328p\n\n
-Wire Notes Line
-	26200 3500 29700 3500
-Wire Notes Line
-	29700 3500 29700 4700
-Wire Notes Line
-	29700 4700 26200 4700
-Wire Notes Line
-	26200 3500 26200 4700
-Text Notes 26200 3500 0    50   ~ 0
-esp 8266
 Text Notes 15100 3150 0    50   ~ 0
 protection ic?\n
 Wire Wire Line
@@ -1285,71 +1195,6 @@ Wire Wire Line
 Connection ~ 16800 3900
 Wire Wire Line
 	16850 3900 16800 3900
-$Comp
-L zuhaily_dev_board_v1-rescue:Micro_SD_Card-Connector J2
-U 1 1 5C62E9C0
-P 6250 8950
-F 0 "J2" H 6200 9667 50  0000 C CNN
-F 1 "Micro_SD_Card" H 6200 9576 50  0000 C CNN
-F 2 "sd_card_pretty:Conn_uSDcard" H 7400 9250 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 6250 8950 50  0001 C CNN
-	1    6250 8950
-	1    0    0    -1  
-$EndComp
-Text Label 4500 8750 0    50   ~ 0
-LEVEL_SHIFT_SD_CS
-Text Label 4450 8850 0    50   ~ 0
-LEVEL_SHIFT_SD_MOSI
-$Comp
-L zuhaily_dev_board_v1-rescue:GND-power #PWR0119
-U 1 1 5C62F03F
-P 4250 9200
-F 0 "#PWR0119" H 4250 8950 50  0001 C CNN
-F 1 "GND" H 4255 9027 50  0000 C CNN
-F 2 "" H 4250 9200 50  0001 C CNN
-F 3 "" H 4250 9200 50  0001 C CNN
-	1    4250 9200
-	1    0    0    -1  
-$EndComp
-Text Label 4600 8950 0    50   ~ 0
-3.3V_REGULATED
-Text Label 4500 9050 0    50   ~ 0
-LEVEL_SHIFT_SD_SCK
-NoConn ~ 5350 8650
-NoConn ~ 5350 9350
-Wire Wire Line
-	5350 9250 4550 9250
-Wire Wire Line
-	5350 9150 4250 9150
-Wire Wire Line
-	4250 9150 4250 9200
-$Comp
-L zuhaily_dev_board_v1-rescue:GND-power #PWR0124
-U 1 1 5C66C78F
-P 7100 9550
-F 0 "#PWR0124" H 7100 9300 50  0001 C CNN
-F 1 "GND" H 7105 9377 50  0000 C CNN
-F 2 "" H 7100 9550 50  0001 C CNN
-F 3 "" H 7100 9550 50  0001 C CNN
-	1    7100 9550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7100 9550 7050 9550
-Wire Wire Line
-	5350 9050 4500 9050
-Wire Wire Line
-	5350 8950 4600 8950
-Wire Wire Line
-	5350 8850 4450 8850
-Wire Wire Line
-	5350 8750 4500 8750
-Wire Notes Line
-	7450 10350 750  10350
-Wire Notes Line
-	750  7650 750  10350
-Wire Notes Line
-	7450 7650 7450 10350
 Text Label 10600 2450 0    50   ~ 0
 PB_1
 Text Label 10600 2350 0    50   ~ 0
@@ -1556,45 +1401,6 @@ Wire Wire Line
 	12300 900  12900 900 
 Wire Wire Line
 	12900 800  12300 800 
-Text Label 25050 3950 0    50   ~ 0
-ESP_TX
-Text Label 25050 4050 0    50   ~ 0
-ESP_RX
-$Comp
-L zuhaily_dev_board_v1-rescue:GND-power #PWR0116
-U 1 1 5C9B0797
-P 25250 4350
-F 0 "#PWR0116" H 25250 4100 50  0001 C CNN
-F 1 "GND" H 25255 4177 50  0000 C CNN
-F 2 "" H 25250 4350 50  0001 C CNN
-F 3 "" H 25250 4350 50  0001 C CNN
-	1    25250 4350
-	1    0    0    -1  
-$EndComp
-Text Label 24700 4150 0    50   ~ 0
-3.3V_REGULATED
-Wire Wire Line
-	25250 4250 25250 4350
-Wire Wire Line
-	26350 4000 26350 3950
-Wire Wire Line
-	26350 4000 26850 4000
-Wire Wire Line
-	26150 4300 26150 4150
-Wire Wire Line
-	26150 4300 26850 4300
-Wire Wire Line
-	28900 4300 28900 4550
-Wire Wire Line
-	28900 4550 26250 4550
-Wire Wire Line
-	26250 4550 26250 4050
-Wire Wire Line
-	28800 4000 28800 4650
-Wire Wire Line
-	28800 4650 26000 4650
-Wire Wire Line
-	26000 4650 26000 4250
 Text Label 22750 1450 0    50   ~ 0
 5V_REGULATED
 Text Label 22950 1550 0    50   ~ 0
@@ -1615,47 +1421,6 @@ Wire Wire Line
 	10700 3650 10450 3650
 Wire Wire Line
 	10700 3750 10450 3750
-$Comp
-L zuhaily_dev_board_v1-rescue:SW_DIP_x04-Switch SW3
-U 1 1 5CAD5234
-P 900 9050
-F 0 "SW3" H 900 9517 50  0000 C CNN
-F 1 "SW_DIP_x04" H 900 9426 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_DIP_SPSTx04_Slide_9.78x12.34mm_W7.62mm_P2.54mm" H 900 9050 50  0001 C CNN
-F 3 "" H 900 9050 50  0001 C CNN
-	1    900  9050
-	1    0    0    -1  
-$EndComp
-Text Label -450 8850 0    50   ~ 0
-ARDUINO_LEVEL_SHIFT_SCK
-Text Label -400 8950 0    50   ~ 0
-ARDUINO_LEVEL_SHIFT_CS
-Text Label -500 9050 0    50   ~ 0
-ARDUINO_LEVEL_SHIFT_MOSI
-Wire Wire Line
-	1200 9050 2300 9050
-Wire Wire Line
-	1200 8950 2300 8950
-Wire Wire Line
-	1200 8850 2300 8850
-Wire Wire Line
-	600  8850 -450 8850
-Wire Wire Line
-	-400 8950 600  8950
-Wire Wire Line
-	600  9050 -500 9050
-Text Label -300 9150 0    50   ~ 0
-ARDUINO_SD_MISO
-Wire Wire Line
-	600  9150 -300 9150
-Wire Wire Line
-	1200 9150 1750 9150
-Wire Wire Line
-	1750 9150 1750 9950
-Wire Wire Line
-	1750 9950 4550 9950
-Wire Wire Line
-	4550 9950 4550 9250
 $Comp
 L zuhaily_dev_board_v1-rescue:CP_Small-Device C4
 U 1 1 5CB98B65
@@ -1755,138 +1520,6 @@ Wire Wire Line
 	16200 2500 16200 2900
 Text Notes 15500 2350 0    50   ~ 0
 You can put a 0.4 ohm resistor, recommended in the datasheet but I didn't\n
-$Comp
-L zuhaily_dev_board_v1-rescue:DS1307Z+-Timer_RTC U6
-U 1 1 5C5C03AE
-P 22750 6700
-F 0 "U6" H 23291 6746 50  0000 L CNN
-F 1 "DS1307Z+" H 23291 6655 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 22750 6200 50  0001 C CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/DS1307.pdf" H 22750 6700 50  0001 C CNN
-	1    22750 6700
-	1    0    0    -1  
-$EndComp
-Text Label 20250 6600 0    50   ~ 0
-SDA
-Text Label 20250 6500 0    50   ~ 0
-SCL
-Text Label 22650 5950 0    50   ~ 0
-5V_REGULATED
-Wire Wire Line
-	22650 6300 22650 6150
-Wire Wire Line
-	22750 6300 22750 6150
-Wire Wire Line
-	22750 6150 22650 6150
-Connection ~ 22650 6150
-Wire Wire Line
-	22650 6150 22650 5950
-Wire Wire Line
-	22250 6800 21800 6800
-Wire Wire Line
-	21800 6800 21800 6750
-$Comp
-L zuhaily_dev_board_v1-rescue:GND-power #PWR0127
-U 1 1 5C665D4A
-P 22750 7250
-F 0 "#PWR0127" H 22750 7000 50  0001 C CNN
-F 1 "GND" H 22755 7077 50  0000 C CNN
-F 2 "" H 22750 7250 50  0001 C CNN
-F 3 "" H 22750 7250 50  0001 C CNN
-	1    22750 7250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	22750 7250 22750 7100
-$Comp
-L zuhaily_dev_board_v1-rescue:R-Device R_SCL1
-U 1 1 5C682EB7
-P 22050 6350
-F 0 "R_SCL1" H 22120 6396 50  0000 L CNN
-F 1 "10k" H 22120 6305 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 21980 6350 50  0001 C CNN
-F 3 "~" H 22050 6350 50  0001 C CNN
-	1    22050 6350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	22050 6500 22250 6500
-Text Label 22050 6200 0    50   ~ 0
-5V_REGULATED
-$Comp
-L zuhaily_dev_board_v1-rescue:R-Device R_SDA1
-U 1 1 5C697913
-P 21700 6450
-F 0 "R_SDA1" H 21770 6496 50  0000 L CNN
-F 1 "10k" H 21770 6405 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 21630 6450 50  0001 C CNN
-F 3 "~" H 21700 6450 50  0001 C CNN
-	1    21700 6450
-	1    0    0    -1  
-$EndComp
-Connection ~ 21700 6600
-Wire Wire Line
-	21700 6300 21700 6200
-Wire Wire Line
-	21700 6200 22050 6200
-Wire Wire Line
-	21700 6600 22250 6600
-Connection ~ 22050 6500
-$Comp
-L zuhaily_dev_board_v1-rescue:SW_DIP_x02-Switch SW_RTC1
-U 1 1 5C6D7AD0
-P 20700 6600
-F 0 "SW_RTC1" H 20700 6967 50  0000 C CNN
-F 1 "SW_DIP_x02" H 20700 6876 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm" H 20700 6600 50  0001 C CNN
-F 3 "" H 20700 6600 50  0001 C CNN
-	1    20700 6600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	21000 6500 22050 6500
-Wire Wire Line
-	21000 6600 21700 6600
-Wire Wire Line
-	20400 6500 20250 6500
-Wire Wire Line
-	20400 6600 20250 6600
-$Comp
-L zuhaily_dev_board_v1-rescue:Crystal_GND3-Device Y3
-U 1 1 5C76D523
-P 21350 6900
-F 0 "Y3" H 21350 7168 50  0000 C CNN
-F 1 "Crystal_GND3" H 21350 7077 50  0000 C CNN
-F 2 "Crystal:Crystal_AT310_D3.0mm_L10.0mm_Horizontal_1EP_style1" H 21350 6900 50  0001 C CNN
-F 3 "~" H 21350 6900 50  0001 C CNN
-	1    21350 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L zuhaily_dev_board_v1-rescue:GND-power #PWR0128
-U 1 1 5C782F61
-P 21350 7100
-F 0 "#PWR0128" H 21350 6850 50  0001 C CNN
-F 1 "GND" H 21355 6927 50  0000 C CNN
-F 2 "" H 21350 7100 50  0001 C CNN
-F 3 "" H 21350 7100 50  0001 C CNN
-	1    21350 7100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	21500 6900 22250 6900
-Wire Wire Line
-	21200 6750 21200 6900
-Wire Wire Line
-	21200 6750 21800 6750
-Wire Wire Line
-	25050 3950 26350 3950
-Wire Wire Line
-	25050 4050 26250 4050
-Wire Wire Line
-	24700 4150 26150 4150
-Wire Wire Line
-	25250 4250 26000 4250
 Wire Wire Line
 	22750 1450 24500 1450
 Wire Wire Line
@@ -1905,4 +1538,154 @@ Wire Notes Line
 	22400 2050 22400 1050
 Text Notes 22400 1100 0    50   ~ 0
 oled\n\n
+Text Label 23450 3150 0    50   ~ 0
+ESP_TX
+Text Label 23550 2650 0    50   ~ 0
+ESP_RX
+$Comp
+L Connector:Conn_01x08_Female J?
+U 1 1 5C9C76CE
+P 24050 2850
+F 0 "J?" H 24077 2826 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 24077 2735 50  0000 L CNN
+F 2 "" H 24050 2850 50  0001 C CNN
+F 3 "~" H 24050 2850 50  0001 C CNN
+	1    24050 2850
+	1    0    0    -1  
+$EndComp
+Text Label 23200 2550 0    50   ~ 0
+3.3V_REGULATED
+$Comp
+L zuhaily_dev_board_v1-rescue:GND-power #PWR?
+U 1 1 5CA2DB01
+P 23500 3250
+F 0 "#PWR?" H 23500 3000 50  0001 C CNN
+F 1 "GND" H 23505 3077 50  0000 C CNN
+F 2 "" H 23500 3250 50  0001 C CNN
+F 3 "" H 23500 3250 50  0001 C CNN
+	1    23500 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	23850 2550 23200 2550
+Wire Wire Line
+	23850 3150 23450 3150
+Wire Wire Line
+	23850 3250 23500 3250
+Wire Wire Line
+	23850 2650 23550 2650
+Wire Notes Line
+	24950 2400 24950 3650
+Wire Notes Line
+	24950 3650 22850 3650
+Wire Notes Line
+	22850 3650 22850 2400
+Wire Notes Line
+	22850 2400 24950 2400
+Text Notes 22850 2400 0    50   ~ 0
+Esp 8266\n
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5CB6AB18
+P 24100 4350
+F 0 "J?" H 24127 4326 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 24127 4235 50  0000 L CNN
+F 2 "" H 24100 4350 50  0001 C CNN
+F 3 "~" H 24100 4350 50  0001 C CNN
+	1    24100 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L zuhaily_dev_board_v1-rescue:GND-power #PWR?
+U 1 1 5CB6AC76
+P 23700 4100
+F 0 "#PWR?" H 23700 3850 50  0001 C CNN
+F 1 "GND" H 23705 3927 50  0000 C CNN
+F 2 "" H 23700 4100 50  0001 C CNN
+F 3 "" H 23700 4100 50  0001 C CNN
+	1    23700 4100
+	1    0    0    -1  
+$EndComp
+Text Label 22950 4350 0    50   ~ 0
+3.3V_REGULATED
+Wire Wire Line
+	22950 4350 23900 4350
+Text Label 23400 4550 0    50   ~ 0
+SCL
+Text Label 23400 4450 0    50   ~ 0
+SDA
+Wire Wire Line
+	23400 4550 23900 4550
+Wire Wire Line
+	23900 4450 23400 4450
+Wire Wire Line
+	23900 4250 23900 4100
+Wire Wire Line
+	23900 4100 23700 4100
+Wire Notes Line
+	25250 3900 25250 4850
+Wire Notes Line
+	25250 4850 22800 4850
+Wire Notes Line
+	22800 4850 22800 3900
+Wire Notes Line
+	22800 3900 25250 3900
+Text Notes 22850 3900 0    50   ~ 0
+DS1307 module\n
+$Comp
+L Connector:Conn_01x06_Female J?
+U 1 1 5CC5816C
+P 24100 5550
+F 0 "J?" H 24127 5526 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 24127 5435 50  0000 L CNN
+F 2 "" H 24100 5550 50  0001 C CNN
+F 3 "~" H 24100 5550 50  0001 C CNN
+	1    24100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L zuhaily_dev_board_v1-rescue:GND-power #PWR?
+U 1 1 5CC5CB20
+P 23600 5200
+F 0 "#PWR?" H 23600 4950 50  0001 C CNN
+F 1 "GND" H 23605 5027 50  0000 C CNN
+F 2 "" H 23600 5200 50  0001 C CNN
+F 3 "" H 23600 5200 50  0001 C CNN
+	1    23600 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	23900 5350 23900 5200
+Wire Wire Line
+	23900 5200 23600 5200
+Text Label 22800 5450 0    50   ~ 0
+3.3V_REGULATED
+Wire Wire Line
+	23900 5450 22800 5450
+Text Label 23100 5550 0    50   ~ 0
+ARDUINO_SD_MISO
+Text Label 22800 5650 0    50   ~ 0
+ARDUINO_LEVEL_SHIFT_MOSI
+Wire Wire Line
+	23100 5550 23900 5550
+Wire Wire Line
+	23900 5650 22800 5650
+Text Label 22900 5750 0    50   ~ 0
+ARDUINO_LEVEL_SHIFT_SCK
+Wire Wire Line
+	23900 5750 22900 5750
+Text Label 22900 5850 0    50   ~ 0
+ARDUINO_LEVEL_SHIFT_CS
+Wire Wire Line
+	22900 5850 23900 5850
+Wire Notes Line
+	24950 5100 24950 6150
+Wire Notes Line
+	24950 6150 22600 6150
+Wire Notes Line
+	22600 6150 22600 5100
+Wire Notes Line
+	22600 5100 24950 5100
+Text Notes 22600 5100 0    50   ~ 0
+sd card module\n
 $EndSCHEMATC
